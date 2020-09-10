@@ -10,6 +10,8 @@
 * [numpy 使用](./02dev/numpy-trick.md)
 * [torch 使用](./02dev/torch.md)
 * [mac opencv 库](./02dev/mac-cv2.md)
+* [ubuntu 相关命令](./02dev/ubuntu.md)
+
 
 
 ## AI
