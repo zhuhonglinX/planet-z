@@ -8,7 +8,7 @@
 * [python development](./02dev/python-dev-env.md)
 * [git 使用](./02dev/git.md)
 * [numpy 使用](./02dev/numpy-trick.md)
-* [torch 使用](./02dev/torch.md)
+* [pytorch 笔记](./02dev/pytorch.md)
 * [mac opencv 库](./02dev/mac-cv2.md)
 * [ubuntu 相关命令](./02dev/ubuntu.md)
 * [python3 笔记](./02dev/python3-note.md)

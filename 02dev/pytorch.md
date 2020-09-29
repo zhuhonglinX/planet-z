@@ -1,4 +1,10 @@
-# PyTorch 使用
+
+# PyTorch
+
+## 保存载入模型
+
+载入模型使用 torch.load，返回值是一个 OrderedDict
+
 
 ## torchvision
 
