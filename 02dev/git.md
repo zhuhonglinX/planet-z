@@ -67,8 +67,12 @@ git merge tmp  # 合并 tmp 分支
 git pull  # fetch 加 merge
 ```
 
-我平常只是用于个人同步代码, 基本 git pull 完事
+## 分支
 
+```shell
+git branch <branch name>  # 创建分支
+git checkout <branch name>  # 切换分支
+```
 
 
 ## gitignore
