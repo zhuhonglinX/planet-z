@@ -11,6 +11,7 @@
 * [pytorch 笔记](./02dev/pytorch.md)
 * [mac opencv 库](./02dev/mac-cv2.md)
 * [ubuntu 相关命令](./02dev/ubuntu.md)
+* [docker 相关命令](./02dev/docker.md)
 * [python3 笔记](./02dev/python3-note.md)
 
 
