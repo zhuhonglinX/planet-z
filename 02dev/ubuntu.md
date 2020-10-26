@@ -70,6 +70,8 @@ cat /etc/group
 sudu useradd -m -G [group,] [user]
 
 sudo passwd [usr]  # 修改密码
+
+sudo sudo usermod -a -G [group] [user]
 ```
 
 #### 查看硬盘容量
@@ -90,4 +92,10 @@ sudo usermod -m -d /raid/[username] [username]
 m：在移动之前的主目录到指定目录下，如果没有就创建。
 
 d：新的主目录地址
+
+#### 查看端口占用
+```bash
+sudo lsof -i:22
+netstat -tulpn | grep 22
+```
 
