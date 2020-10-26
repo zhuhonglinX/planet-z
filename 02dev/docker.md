@@ -31,17 +31,33 @@ docker rm <container ID> # delete container
 
 # 从 image 创建 container
 docker run -ti <image name> /bin/bash
-docker rum -ti -v <host path>:<container path> <image name> /bin/bash
+
+# 挂载硬盘
+docker run -ti -v <host path>:<container path> <image name> /bin/bash
+
+# 映射 ssh 端口
+docker run -p 10050:22 -dti <image name> /bin/bash
 
 # 使用 gpu
-docker run --runtime nvidia -ti <image name> /bin/bash
+docker --runtime nvidia run -ti <image name> /bin/bash
 
 # Ctrl + D 退出并挂起容器
-# Ctrl + P Ctrl + Q 退出容器
-docker start <container ID>
-docker attach <container ID>  # 进入容器，退出挂起
+docker start <container ID>  # 启动容器
+# docker attach <container ID>  # 进入容器，退出挂起
 docker exec -ti <container ID> /bin/bash  # 进入容器，退出不会挂起
 
 docker stop <container ID>  # 挂起容器
 
+docker export 容器名称 > 镜像名称.tar
+docker import 镜像名称.tar <image name>:<tag>
+```
+
+自动容器的例子：
+
+镜像 `cuda10.2-pytorch1.6:zhuhl-repo-1` 已经包含了 cuda 和 pytorch 的环境，并且配置了 conda 作为管理器，终端使用 oh-my-zsh。
+
+```shell
+# 启动
+docker run --runtime nvidia -p 10050:22 -v /raid/zhuhl:/home/zhuhl --name zhuhl-1 -dti cuda10.2-pytorch1.6:zhuhl-repo-1 zsh
+docker exec -ti zhuhl-1 zsh
 ```
