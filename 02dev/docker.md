@@ -48,8 +48,12 @@ docker exec -ti <container ID> /bin/bash  # 进入容器，退出不会挂起
 
 docker stop <container ID>  # 挂起容器
 
-docker export 容器名称 > 镜像名称.tar
-docker import 镜像名称.tar <image name>:<tag>
+# 不要使用如下的方式导出导入镜像，这会导致无法使用 nvidia gpu
+# docker export 容器名称 > 镜像名称.tar
+# docker import 镜像名称.tar <image name>:<tag>
+# 正确的方式如下
+dcoker commit <container ID> <image name>:<tag>
+
 ```
 
 自动容器的例子：
