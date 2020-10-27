@@ -74,6 +74,13 @@ sudo passwd [usr]  # 修改密码
 sudo sudo usermod -a -G [group] [user]
 ```
 
+#### 修改用户和权限
+
+```bash
+chown [-R] <user>:<group> <file>  # 修改所属用户/组
+chmod 755 <file> [-R]  # 修改权限
+```
+
 #### 查看硬盘容量
 
 ```bash
@@ -99,3 +106,20 @@ sudo lsof -i:22
 netstat -tulpn | grep 22
 ```
 
+
+#### scp 传输文件
+
+```bash
+# 本地文件传输到远程服务器的 lab 目录下
+scp test.zip <user>@<ip>:/home/zhuhl/lab
+
+# 从远程主机复制文件到本地主机
+scp <user>@<ip>:/home/zhuhl/lab/test.zip .
+
+# 复制整个文件夹
+scp -r dir <user>@<ip>:/home/zhuhl/lab
+scp -r <user>@<ip>:/home/zhuhl/lab/dir .
+
+# 指定端口
+scp -P <port>  # -P 跟在 scp 后，否则可能出错
+```
