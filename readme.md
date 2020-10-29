@@ -3,17 +3,17 @@
 
 ## Dev
 
-* [常用命令](./02dev/command.md)
-* [lldb 使用](./02dev/lldb-usage.md)
 * [python development](./02dev/python-dev-env.md)
-* [git 使用](./02dev/git.md)
-* [numpy 使用](./02dev/numpy-trick.md)
-* [pytorch 笔记](./02dev/pytorch.md)
-* [mac opencv 库](./02dev/mac-cv2.md)
-* [ubuntu 相关命令](./02dev/ubuntu.md)
-* [docker 相关命令](./02dev/docker.md)
-* [python3 笔记](./02dev/python3-note.md)
-
+* [常用命令](./02dev/command.md)
+* [python3](./02dev/python3-note.md)
+* [mac opencv](./02dev/mac-cv2.md)
+* [lldb](./02dev/lldb-usage.md)
+* [git](./02dev/git.md)
+* [numpy](./02dev/numpy-trick.md)
+* [pytorch](./02dev/pytorch.md)
+* [docker](./02dev/docker.md)
+* [ubuntu](./02dev/ubuntu.md)
+* [tmux](./02dev/tmux.md)
 
 
 ## AI
