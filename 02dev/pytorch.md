@@ -24,3 +24,21 @@ transform = transforms.Compose([
 * 形状为 `[H, W, C]` 的 `numpy.ndarray`，转换成形状为 `[C, H, W]`，取值范围是 `[0, 1.0]` 的`torch.FloadTensor`。
 * 取值范围为 `[0, 255]` 的 `PIL.Image`，转换成形状为 `[C, H, W]`，取值范围是 `[0, 1.0]` 的`torch.FloadTensor`
 
+
+## np cv 和 PIL
+
+```python
+from PIL import Image
+import cv2
+
+# 读取图像
+img1 = Image.open(img_path).convert('RGB')
+img2 = cv2.imread(img_path)  # BGR
+img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)  # BGR -> RGB
+
+# numpy PIL 转换
+img3 = np.array(img1, dtype=np.float)
+img4 = Image.fromarray(img2)
+
+```
+
