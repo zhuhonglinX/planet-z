@@ -49,9 +49,9 @@ a = a.permute(2, 0, 1).contiguous()
 ```
 
 
-## torchvision
+# torchvision
 
-### transforms
+## transforms
 
 ```python
 from torchvision import transforms
