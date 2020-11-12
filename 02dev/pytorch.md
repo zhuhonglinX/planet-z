@@ -30,10 +30,10 @@ pil_img = Image.fromarray(np_img)
 
 # Tensor 和 Numpy 转换
 a = np.ones(5)
-b = torch.from_numpy(a)
+b = torch.from_numpy(a)  # a b 共享内存数据
 
 a = torch.ones(5)
-b = a.numpy()
+b = a.numpy()  # # a b 共享内存数据
 
 # PIL to Tensor
 tensor_img = torch.from_numpy(np.array(pil_img))
