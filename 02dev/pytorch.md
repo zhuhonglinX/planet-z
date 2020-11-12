@@ -6,35 +6,46 @@
 载入模型使用 torch.load，返回值是一个 OrderedDict
 
 
-## np cv 和 PIL
+## clone detach new_tensor 和 copy_
+
+参考博客：https://blog.csdn.net/guofei_fly/article/details/104486708
+
+
+## pytorch numpy cv2 和 PIL
 
 ```python
 from PIL import Image
 import cv2
-
-# 读取图像
-img1 = Image.open(img_path).convert('RGB')
-img2 = cv2.imread(img_path)  # BGR
-img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)  # BGR -> RGB
-
-# numpy PIL 转换
-img3 = np.array(img1, dtype=np.float)
-img4 = Image.fromarray(img2)
-
-```
-
-## torch 和 numpy
-
-```python
-# torch numpy 转换
 import numpy as np
 import torch
 
+# 读取图像
+pil_img = Image.open(img_path).convert('RGB')
+cv_img = cv2.imread(img_path)  # BGR
+cv_img = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)  # BGR -> RGB
+
+# Numpy 和 PIL 转换
+np_img = np.array(pil_img, dtype=np.float)
+pil_img = Image.fromarray(np_img)
+
+# Tensor 和 Numpy 转换
 a = np.ones(5)
 b = torch.from_numpy(a)
 
 a = torch.ones(5)
 b = a.numpy()
+
+# PIL to Tensor
+tensor_img = torch.from_numpy(np.array(pil_img))
+# Check torchvision.transforms.function.to_tensor
+```
+
+## permute
+
+pytorch tensor 将 HWC 格式转换为 CHW 格式
+
+```python
+a = a.permute(2, 0, 1).contiguous()
 ```
 
 
