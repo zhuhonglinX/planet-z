@@ -73,7 +73,7 @@ apt install openssh-server
 测试一下，本地连接远程服务器中启动的容器：
 
 ```bash
-ssh -p <port> root@10.214.222.17
+ssh -p <port> root@<ip>
 ```
 
 ip 是新机器的 ip，用户是容器的用户 root，但是连接的端口是之前容器和主机映射的时候指定的端口。连接出错可以看一下 `/etc/ssh/sshd_config` 的配置是否正确，这个可以参考一般的服务器配置 ssh 登录的教程。成功连接后可以配置 public/private key 方便登陆。
