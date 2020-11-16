@@ -61,7 +61,7 @@ passwd
 安装 sshd：
 
 ```bash
-apt install openssh-server
+apt update && apt install openssh-server
 ```
 
 启动：
