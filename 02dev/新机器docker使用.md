@@ -64,13 +64,24 @@ passwd
 apt update && apt install openssh-server
 ```
 
+修改sshd配置：
+
+```bash
+vim /etc/ssh/sshd_config
+
+# 在配置文件中添加这一行
+PermitRootLogin yes
+```
+
+创建的容器只有一个 root 用户，因此需要允许root登陆。
+
 启动：
 
 ```bash
 /etc/init.d/ssh start
 ```
 
-测试一下，本地连接远程服务器中启动的容器：
+测试一下，本地ssh连接远程服务器中的容器：
 
 ```bash
 ssh -p <port> root@<ip>
