@@ -16,11 +16,9 @@
 * [tmux](./02dev/tmux.md)
 
 
-## AI
+## 其他
 
-* [线性模型](./01AI/线性模型.md)
-* [IoU](./01AI/IOU.md)
-* [非极大值抑制](./01AI/non-maximum-suppression.md)
+* [新机器docker使用](./02dev/新机器docker使用.md)
 
 
 
