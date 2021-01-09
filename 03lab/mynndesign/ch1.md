@@ -1,10 +1,12 @@
+# Deep Learning Framework Exploration-基础ch1
 
+## 正向传播
 
+如图：
 
+![](./imgs/bp-1.png)
 
-忽略偏置和激活函数。
-
-
+假设一个简单 3 层全连接网络结构，输入用 $ x $ 表示，上标 $ (l) $ 表示第 $ l $ 层神经元，每一层的输出用符号 $ y $ 表示，权重用符号 $ w $ 表示，部分连接线路没有画出来。暂时忽略偏置和激活函数。
 
 第一层的参数表示如下：
 $$
@@ -84,7 +86,7 @@ L = f(y_{1}^{(3)}, y_{2}^{(3)}, y_{3}^{(3)})
 $$
 
 
-上述过程就是整个正向传播的过程。
+上述过程就是整个正向传播的过程用矩阵运算的表示结果。
 
 
 
@@ -170,6 +172,18 @@ $$
 \frac{\partial L}{\partial y_{1}^{(2)}} = \frac{\partial L}{\partial y_1^{(3)}} \cdot w_{11}^{(3)} + \frac{\partial L}{\partial y_2^{(3)}} \cdot w_{12}^{(3)} + \frac{\partial L}{\partial y_3^{(3)}} \cdot w_{13}^{(3)}
 $$
 显然，第二层梯度需要计算的 $\frac{\partial L}{\partial y_1^{(3)}}$，$\frac{\partial L}{\partial y_2^{(3)}}$，$\frac{\partial L}{\partial y_3^{(3)}}$ 在第三层的计算梯度的时候已经计算过了，
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
