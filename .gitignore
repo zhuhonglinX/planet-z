@@ -1,2 +1,12 @@
 
+# dir
+out
+
 .DS_Store
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.xdv
+*.bib.bak
