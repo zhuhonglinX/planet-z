@@ -1,6 +1,8 @@
 
 日常记录
 
+typora 查看
+
 ## Dev
 
 * [python development](./02dev/python-dev-env.md)
