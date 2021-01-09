@@ -19,6 +19,7 @@
 ## 其他
 
 * [新机器docker使用](./02dev/新机器docker使用.md)
+* [mynndesign-chapter1](./03lab/mynndesign/ch1.html)
 
 
 
