@@ -48,8 +48,6 @@ chmod 600 ~/.ssh/config
 chown $USER ~/.ssh/config
 ```
 
-
-
 ## git
 
 一些指令
@@ -57,7 +55,7 @@ chown $USER ~/.ssh/config
 ```shell
 git status
 git add <file>
-git commit -m "balabala"
+git commit -m "placeholder"
 git remote add origin git@github.com:zhuhonglinX/tf_example.git
 git push -u origin master
 
@@ -70,7 +68,7 @@ git pull  # fetch 加 merge
 ## 分支
 
 ```shell
-git branch <branch name>  # 创建分支
+git checkout -b <branch name>  # 创建分支
 git checkout <branch name>  # 切换分支
 ```
 

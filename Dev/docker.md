@@ -56,12 +56,3 @@ dcoker commit <container ID> <image name>:<tag>
 
 ```
 
-自动容器的例子：
-
-镜像 `cuda10.2-pytorch1.6:zhuhl-repo-1` 已经包含了 cuda 和 pytorch 的环境，并且配置了 conda 作为管理器，终端使用 oh-my-zsh。
-
-```shell
-# 启动
-docker run --runtime nvidia -p 10050:22 -v /raid/zhuhl:/home/zhuhl --name zhuhl-1 -dti cuda10.2-pytorch1.6:zhuhl-repo-1 zsh
-docker exec -ti zhuhl-1 zsh
-```

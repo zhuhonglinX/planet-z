@@ -5,23 +5,20 @@ typora 查看
 
 ## Dev
 
-* [python development](./02dev/python-dev-env.md)
-* [常用命令](./02dev/command.md)
-* [python3](./02dev/python3-note.md)
-* [mac opencv](./02dev/mac-cv2.md)
-* [lldb](./02dev/lldb-usage.md)
-* [git](./02dev/git.md)
-* [numpy](./02dev/numpy-trick.md)
-* [pytorch](./02dev/pytorch.md)
-* [docker](./02dev/docker.md)
-* [ubuntu](./02dev/ubuntu.md)
-* [tmux](./02dev/tmux.md)
+* [Development/Command/Env](./Dev/dev_env.md)
+* [lldb](./Dev/lldb-usage.md)
+* [git](./Dev/git.md)
+* [tmux](./Dev/tmux.md)
+* [docker](./Dev/docker.md)
+* [python3](./Dev/python3-note.md)
+* [numpy](./Dev/numpy-trick.md)
+* [pytorch](./Dev/pytorch.md)
+* [mac opencv](./Dev/mac-cv2.md)
 
 
 ## 其他
 
-* [新机器docker使用](./02dev/新机器docker使用.md)
-* [mynndesign-chapter1](./03lab/mynndesign/ch1.md)
+* [新机器docker使用](./Dev/新机器docker使用.md)
 
 
 
