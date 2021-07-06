@@ -1,6 +1,11 @@
 
 # dir
 out
+.vscode
+
+/Lab/cpp/*
+!/Lab/cpp/*.*
+/Lab/cpp/*.dSYM
 
 .DS_Store
 *.aux
