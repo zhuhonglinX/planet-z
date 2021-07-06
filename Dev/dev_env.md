@@ -130,7 +130,7 @@ git checkout <branch name>  # switch branch
 # 一开始，创建本地新分支，在本地新分支上写代码，本地提交
 * --> *		    # master
 	  |
-	  --> *	    # mybranch
+      --> *	    # mybranch
 
 # 远程master分支有其他人提交了代码，所以需要拉取新的代码
 git checkout master     # 先切到本地master
