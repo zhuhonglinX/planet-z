@@ -29,9 +29,9 @@ pip install -i https://pypi.douban.com/simple <package name>
 ```
 
 
-# ssh 配置
+# SSH 配置
 
-## local machine and remote sever
+## Local machine and remote sever
 
 ### sshd in remote sever
 
@@ -64,18 +64,111 @@ Port 22  # 设置 ssh server 的端口
 # TODO
 ```
 
-### ssh key
+### Generate key
 
+```bash
+# generate key `id_rsa` and `id_rsa.pub` in directory `~/.ssh`.
+ssh-keygen -t rsa -C "youremail@example.com"
+
+```
+
+### Configuration
+
+`Bad owner or permissions` error:
+
+```bash
+chmod 600 ~/.ssh/config
+chown $USER ~/.ssh/config
+```
 
 
 ## Github or other
 
 ### Github
 
+1. Generate ssh key in local machine.
+2. Upload public key to Github
+3. Edit `~/.ssh/config`
+4. Check
+
+```bash
+vim ~/.ssh/config
+
+# in config file, add new host
+Host me.github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+# :wq
+
+# check
+ssh -T git@github.com
+```
+
 ### Gitlab
 
 
 # Git
+
+## Usage
+
+```bash
+git status
+git log
+git branch  # view local branch
+git branch -a  # view local and remote branch
+git add <file>
+git commit -m "placeholder"
+git remote add origin git@github.com:zhuhonglinX/tf_example.git
+git push -u origin master
+git pull
+git checkout -b <branch name>  # create new branch
+git checkout <branch name>  # switch branch
+```
+
+```bash
+# 一开始，创建本地新分支，在本地新分支上写代码，本地提交
+* --> *		    # master
+	  |
+	  --> *	    # mybranch
+
+# 远程master分支有其他人提交了代码，所以需要拉取新的代码
+git checkout master     # 先切到本地master
+git pull                # 拉取并合并
+# 此时分支情况
+* --> *	--> *       # master
+            |
+            --> *   # mybranch
+
+# rebase 分支
+git checkout mybranch
+git rebase master
+* --> *	--> *         # master
+            |
+            --> *     # mybranch
+
+# 如果rebase有冲突要在本地解决冲突，然后继续 rebase
+git rebase --continue
+
+# 如果只是对上次提交的文件的修改，只需要更新修改
+git commit --amend
+
+# push for code review
+git push origin HEAD:refs/for/master/mybranch
+```
+
+## gitignore
+
+```yaml
+# ignore all .pt files
+*.pt
+# but do not ignore `last.pt`
+!last.pt
+# ignore dir
+.vscode/
+# ignore .txt files in root dir `/`
+/*.txt
+```
 
 # Tmux
 
