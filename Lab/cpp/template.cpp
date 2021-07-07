@@ -31,13 +31,24 @@ struct ElementAlignedTag {
 };
 
 
+////////// Variadic Template /////////
+void demo_print() {
+    cout << "end." << endl;
+}
+
+template <typename T, typename... Types>
+void demo_print(T arg, Types... args) {
+    cout << arg << endl;
+    demo_print(args...);
+}
+
 
 int main() {
     // testNontypeTemp();
     // cout << ElementAlignedTag::s_align<int> << endl;
     // cout << ElementAlignedTag::s_align<int64_t> << endl;
 
-    
+    demo_print(1, 2, 3, 4, 5);
 
     return 0;
 }
