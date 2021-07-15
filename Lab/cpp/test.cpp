@@ -22,6 +22,13 @@ int main() {
     for (auto i : v)
         std::cout << i << ' ';
 
+    size_t a = next_power_of_2(20);
+    cout << a << endl;
+
+    // get address
+    int* arr[5] {0};
+    cout << &arr << endl;
+    cout << reinterpret_cast<uintptr_t>(arr) << endl;
     return 0;
 }
 
