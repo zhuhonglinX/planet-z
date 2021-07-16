@@ -3,16 +3,6 @@
 out
 .vscode
 
-/Lab/cpp/*
-!/Lab/cpp/*.*
-/Lab/cpp/*.dSYM
 
-.DS_Store
-*.aux
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.xdv
-*.bib.bak
-*.toc
+**/.DS_Store
+**/*.dSYM
